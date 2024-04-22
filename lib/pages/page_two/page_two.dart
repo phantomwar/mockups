@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mockups/constants/constants.dart';
+import 'package:mockups/pages/page_two/widgets/custom_arrow_back.dart';
 import 'package:mockups/pages/page_two/widgets/custom_button_tinder.dart';
 import 'package:mockups/pages/page_two/widgets/custom_terms_text.dart';
 
@@ -13,52 +15,100 @@ class PageTwo extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Constants.linearAppColorOne, Constants.linearAppColortwo],
+            colors: [
+              Constants.linearAppColorOne,
+              Constants.linearAppColortwo,
+            ],
             begin: Alignment.centerLeft,
             end: Alignment.topRight,
           ),
         ),
-        child: const Column(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Align(
+            const Align(
               alignment: Alignment.topLeft,
+              child: CustomArrowBack(),
             ),
-            Text(
-              'tinder',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 60,
-                  fontWeight: FontWeight.bold),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Stack(
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 45,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(120),
+                      ),
+                    ),
+                    Container(
+                      height: 20,
+                      width: 10,
+                      decoration: const BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(50),
+                          )),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Stack(
+                      children: [
+                        ClipOval(
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    const Text(
+                      'tinder',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 60,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 100,
             ),
-            CustomTermsText(),
-            SizedBox(
+            const CustomTermsText(),
+            const SizedBox(
               height: 30,
             ),
-            CustomButtonTinder(
+            const CustomButtonTinder(
               title: 'SIGN IN WITH APPLE',
               titleColor: Colors.white,
               icon: Icons.apple,
             ),
-            CustomButtonTinder(
+            const CustomButtonTinder(
                 title: 'SIGN IN WITH FACEBOOK',
                 titleColor: Colors.white,
                 icon: Icons.facebook),
-            CustomButtonTinder(
+            const CustomButtonTinder(
                 title: 'SIGN IN WITH PHONE NUMBER',
                 titleColor: Colors.white,
                 icon: Icons.chat_bubble),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Text(
+            const Text(
               'Trouble signing in?',
               style: TextStyle(color: Colors.white),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             )
           ],

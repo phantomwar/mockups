@@ -5,11 +5,13 @@ class PageTeste extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(''),
+    return Material(
+      child: Container(
+        color: Colors.black,
+        child: const Column(
+          children: [],
+        ),
       ),
-      body: Container(),
     );
   }
 }

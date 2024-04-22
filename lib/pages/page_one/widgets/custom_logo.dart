@@ -10,8 +10,8 @@ class CustomLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: topMargin ?? 0),
-      height: 120,
-      width: 120,
+      height: 100,
+      width: 100,
       child: Row(
         children: [
           Column(
@@ -23,8 +23,8 @@ class CustomLogo extends StatelessWidget {
                   color: Constants.prymaryAppColor,
                   borderRadius: BorderRadius.circular(60),
                 ),
-                height: 56,
-                width: 56,
+                height: 46,
+                width: 46,
               ),
               Container(
                 margin: const EdgeInsets.only(right: 8),
@@ -34,8 +34,8 @@ class CustomLogo extends StatelessWidget {
                     bottomLeft: Radius.circular(90),
                   ),
                 ),
-                height: 56,
-                width: 56,
+                height: 46,
+                width: 46,
               )
             ],
           ),
@@ -47,8 +47,8 @@ class CustomLogo extends StatelessWidget {
                 bottomLeft: Radius.circular(90),
               ),
             ),
-            height: 120,
-            width: 56,
+            height: 100,
+            width: 46,
           )
         ],
       ),

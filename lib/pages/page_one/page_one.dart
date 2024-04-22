@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:mockups/constants/constants.dart';
 import 'package:mockups/pages/page_one/widgets/custom_button.dart';
 import 'package:mockups/pages/page_one/widgets/custom_logo.dart';
@@ -12,30 +14,32 @@ class PageOne extends StatelessWidget {
       child: Container(
         decoration: const BoxDecoration(color: Colors.black),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const CustomLogo(
-              topMargin: 120,
+            CustomLogo(
+              topMargin: MediaQuery.sizeOf(context).height * 0.2,
             ),
             Container(
-              margin: const EdgeInsets.all(30),
+              margin: EdgeInsets.symmetric(
+                  vertical: MediaQuery.sizeOf(context).height * 0.03),
               child: const Text(
-                'Get your Money Under Control',
+                'Get your Money \nUnder Control',
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 42,
+                    fontSize: 36,
                     fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
             ),
             Container(
+              width: MediaQuery.sizeOf(context).width * 0.9,
               margin: const EdgeInsets.only(left: 15, right: 15, bottom: 30),
               child: const Text(
-                'Manage you Expenses. Seamlessly.',
+                'Manage you Expenses.\nSeamlessly.',
                 style: TextStyle(
                   color: Colors.grey,
-                  fontSize: 26,
+                  fontSize: 20,
                   fontWeight: FontWeight.w700,
                 ),
                 textAlign: TextAlign.center,

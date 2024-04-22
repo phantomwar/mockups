@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
 import 'package:mockups/constants/constants.dart';
 import 'package:mockups/pages/page_two/widgets/custom_arrow_back.dart';
 import 'package:mockups/pages/page_two/widgets/custom_button_tinder.dart';
@@ -34,9 +32,11 @@ class PageTwo extends StatelessWidget {
             SizedBox(
               height: MediaQuery.sizeOf(context).height * 0.08,
             ),
-            const Align(
+            Align(
               alignment: Alignment.topLeft,
-              child: CustomArrowBack(),
+              child: CustomArrowBack(
+                onTap: () => Navigator.pop(context),
+              ),
             ),
             SizedBox(
               height: MediaQuery.sizeOf(context).height * 0.2,

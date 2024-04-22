@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:mockups/constants/constants.dart';
 import 'package:mockups/pages/page_one/widgets/custom_button.dart';
 import 'package:mockups/pages/page_one/widgets/custom_logo.dart';

@@ -1,10 +1,5 @@
-import 'dart:math';
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:mockups/constants/constants.dart';
 
 class CustomLogoTinder extends StatelessWidget {
@@ -22,26 +17,24 @@ class CustomLogoTinder extends StatelessWidget {
               clipper: CustomClipWhiteOval(),
               child: Container(
                 height: 45,
-                width: 45,
+                width: 40,
                 decoration: const BoxDecoration(
                   color: Colors.white,
                 ),
               ),
             ),
             Positioned(
-              left: 1.5,
-              top: 0,
-              child: Transform.rotate(
-                angle: 20 * pi / 180,
-                child: ClipOval(
-                  clipper: CustomClipFire(),
-                  child: Container(
-                    height: 28,
-                    width: 28,
-                    decoration: BoxDecoration(
-                      color: Constants.linearAppColorOne,
-                      borderRadius: BorderRadius.circular(30),
-                    ),
+              left: 4,
+              top: -2,
+              child: Container(
+                height: 23,
+                width: 13,
+                decoration: BoxDecoration(
+                  color: Constants.linearAppColorOne,
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(90),
+                    topRight: Radius.circular(60),
                   ),
                 ),
               ),
@@ -64,17 +57,7 @@ class CustomLogoTinder extends StatelessWidget {
 class CustomClipWhiteOval extends CustomClipper<Rect> {
   @override
   Rect getClip(Size size) {
-    return Rect.fromLTWH(0, 0, size.width - 15, size.height);
-  }
-
-  @override
-  bool shouldReclip(covariant CustomClipper<Rect> oldClipper) => false;
-}
-
-class CustomClipFire extends CustomClipper<Rect> {
-  @override
-  Rect getClip(Size size) {
-    return Rect.fromLTWH(0, 0, size.width - 16, size.height);
+    return Rect.fromLTWH(0, 0, size.width - 5, size.height);
   }
 
   @override

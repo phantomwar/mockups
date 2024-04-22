@@ -4,12 +4,13 @@ import '../../../constants/constants.dart';
 
 class CustomLogo extends StatelessWidget {
   final double? topMargin;
-  const CustomLogo({super.key, this.topMargin});
+  final double? bottomMargin;
+  const CustomLogo({super.key, this.topMargin, this.bottomMargin});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: topMargin ?? 0),
+      margin: EdgeInsets.only(top: topMargin ?? 0, bottom: bottomMargin ?? 0),
       height: 100,
       width: 100,
       child: Row(

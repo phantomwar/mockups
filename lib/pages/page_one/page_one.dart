@@ -5,6 +5,8 @@ import 'package:mockups/constants/constants.dart';
 import 'package:mockups/pages/page_one/widgets/custom_button.dart';
 import 'package:mockups/pages/page_one/widgets/custom_logo.dart';
 
+import 'widgets/custom_title_page_one.dart';
+
 class PageOne extends StatelessWidget {
   const PageOne({super.key});
 
@@ -19,34 +21,11 @@ class PageOne extends StatelessWidget {
           children: [
             CustomLogo(
               topMargin: MediaQuery.sizeOf(context).height * 0.2,
+              bottomMargin: MediaQuery.sizeOf(context).height * 0.04,
             ),
-            Container(
-              margin: EdgeInsets.symmetric(
-                  vertical: MediaQuery.sizeOf(context).height * 0.03),
-              child: const Text(
-                'Get your Money \nUnder Control',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 36,
-                    fontWeight: FontWeight.bold),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Container(
-              width: MediaQuery.sizeOf(context).width * 0.9,
-              margin: const EdgeInsets.only(left: 15, right: 15, bottom: 30),
-              child: const Text(
-                'Manage you Expenses.\nSeamlessly.',
-                style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            const SizedBox(
-              height: 40,
+            const CustomTitlePageOne(),
+            SizedBox(
+              height: MediaQuery.sizeOf(context).height * 0.09,
             ),
             CustomButton(
               title: 'Sign Up with Email ID',
@@ -57,7 +36,7 @@ class PageOne extends StatelessWidget {
               },
             ),
             const SizedBox(
-              height: 20,
+              height: 15,
             ),
             CustomButton(
               icon: Image.asset(

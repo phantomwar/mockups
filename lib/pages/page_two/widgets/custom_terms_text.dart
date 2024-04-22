@@ -5,16 +5,16 @@ class CustomTermsText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: MediaQuery.sizeOf(context).width * 0.9,
-      child: const Text.rich(
+    const double textsize = 12;
+    return const SizedBox(
+      child: Text.rich(
         textAlign: TextAlign.center,
         TextSpan(
-          text: 'By tapping Create Account or Sign In, you agree to our ',
+          text: 'By tapping Create Account or Sign In, you agree to our\n ',
           style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.w500,
-          ),
+              color: Colors.white,
+              fontWeight: FontWeight.w500,
+              fontSize: textsize),
           children: [
             TextSpan(
               text: 'Terms',
@@ -24,7 +24,7 @@ class CustomTermsText extends StatelessWidget {
                   decorationColor: Colors.white),
             ),
             TextSpan(
-              text: '. Learm how we process your data in our ',
+              text: '. Learm how we process your data in\n our ',
               style: TextStyle(color: Colors.white),
             ),
             TextSpan(
